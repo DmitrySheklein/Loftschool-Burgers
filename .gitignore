@@ -1,0 +1,13 @@
+/node_modules/
+/dist/
+/.git/
+/app/css/
+/**/*.psd
+/**/Thumbs.db
+/**/*.DS_Store
+app/components
+bower_components
+node_modules
+build
+public
+dist
