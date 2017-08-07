@@ -1,0 +1,32 @@
+.best
+    background-color: #fff
+    background-image: url('../img/best_bg.jpg')
+    background-repeat: no-repeat
+    background-position: 50%
+    background-size: cover
+    color: #2f3234
+    .best__wrapper
+        +center(y)
+    &-title
+        text-align: center
+        margin-bottom: 70px
+.best__list
+    list-style: none
+    +row-flex
+.best__item
+    +col
+    +size(4)
+    display: flex
+    flex-direction: column
+.best
+    &__img
+        text-align: center
+    &__name
+        font-family: lifehack
+        font-size: 24px
+        line-height: 1.3
+        margin-bottom: 10px
+        text-align: center
+    &__descr
+        font-family: ubuntu
+        font-size: 14px

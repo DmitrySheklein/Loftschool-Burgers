@@ -6,7 +6,7 @@ var settings = {
     filename: '_smart-grid',
     outputStyle: 'sass', /* less || scss || sass || styl */
     columns: 12, /* number of grid columns */
-    offset: '30px', /* gutter width px || % */
+    offset: '10px', /* gutter width px || % */
     container: {
         maxWidth: '960px', /* max-width оn very large screen */
         fields: '15px' /* side fields */

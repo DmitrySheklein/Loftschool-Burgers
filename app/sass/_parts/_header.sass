@@ -1,0 +1,53 @@
+.header
+    background: url('../img/bg-pattern.png') repeat center/ auto
+.main-header
+    +clearfix
+.main-header__logo
+    float: left
+    padding-top: 12px
+.main-header__nav
+    float: right
+    padding-top: 28px
+    .nav__link
+        font-size: 13px
+        text-transform: uppercase
+        font-family: "ubuntu"
+        margin-left: 14px
+        &:first-child:before,
+        &.btn:before
+            display: none
+        &:before
+            content: ''
+            width: 4px
+            height: 4px
+            display: inline-block
+            vertical-align: middle
+            margin-right: 14px
+            background: #fff
+            border-radius: 50%
+.header-content
+    +center(y)
+    &__left
+        display: inline-block
+        vertical-align: middle
+        max-width: 460px
+        margin-top: -52px
+    &__right
+        display: inline-block
+        vertical-align: middle
+        max-width: 460px
+        margin-left: 930px - (460px * 2)
+    &__descr
+        font-size: 63px
+        line-height: 60px
+        font-family: lifehack
+        text-transform: lowercase
+        color: #fff
+.arrow-down
+    width: 60px
+    height: 60px
+    position: absolute
+    left: 50%
+    bottom: 20px
+    margin-left: -30px
+    background-color: #fff
