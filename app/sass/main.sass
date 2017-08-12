@@ -63,17 +63,26 @@ a
 	font-family: ubuntu-medium,Arial, Helvetica, sans-serif
 	font-size: 13px
 	line-height: 35px
+	color: #fff
 	background: $btn
 	text-transform: uppercase
 	text-decoration: none
 	border: none
 	border-radius: 5px
 	transition: backround .2s ease-out
+	cursor: pointer
 	&:hover
 		background: darken($btn,10)
 		text-decoration: none
-.btn,.section-title--white
-	color: #fff
+	&--clear
+		background: rgba(#fff,0)
+		&:hover
+			background: rgba(#fff,0)
+			box-shadow: 0 0 4px 0px $btn
+	&--black
+		background: $btn-dark
+		&:hover
+			background: darken($btn-dark,5)
 .section-title
 	font-family: gagalin,Arial,sasn-serif
 	font-size: 72px
@@ -81,8 +90,13 @@ a
 	color: $section-title
 	&--black
 		color: #2f3234
+	&--white
+		color: #fff
 @import "_parts/header"
 @import "_parts/best"
 @import "_parts/products"
 @import "_parts/team"
+@import "_parts/menu"
+@import "_parts/reviews"
+@import "_parts/order"
 @import "media" // Всегда в конце

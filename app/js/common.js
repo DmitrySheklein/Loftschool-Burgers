@@ -23,8 +23,9 @@ $(function() {
 		e.preventDefault();
 		slider.trigger('next.owl.carousel');
 	});	
-	//Accordeon
-	$('.team__accord .team__accord-link').on('click', function(){
+	//Accordeon vertical
+	$('.team__accord .team__accord-link').on('click', function(e){
+		e.preventDefault()
 		var $this = $(this),
 			content = $this.next();
 		$('.team__accord .team__accord-info:visible').not(content).slideUp(300)
@@ -32,4 +33,29 @@ $(function() {
 		$this.toggleClass('active')
 		content.slideToggle(300)
 	})
+	//Accordeon gorizontal
+	$('.menu-accord .menu-accord__link').on('click', function(e){
+		e.preventDefault()
+		var $this = $(this),
+			item = $this.closest('.menu-accord__item');
+		if(!item.hasClass('active')){
+			item.addClass('active')
+			.siblings()
+			.removeClass('active')
+		} else {
+			item.removeClass('active')
+		}
+	})
+	$(document).on('click', function(event) {
+	var menu = $(event.target).closest('.menu-accord'),
+		items = $('.menu-accord__item');
+
+	if (!menu.length) {
+		console.log(1)
+		items.removeClass('is-active');
+	}
+	});	
+	//Input mask
+	$('input[type=tel]').inputmask("+7 (999) 999 99 99");
+	console.log($('input[type=tel]'))
 });
